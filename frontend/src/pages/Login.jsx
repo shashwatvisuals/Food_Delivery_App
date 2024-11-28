@@ -5,6 +5,8 @@ import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
+import styles from "./pageModule/Login.module.css"
+import Footer from "../components/Footer"
 
 const Login = () => {
   const [isSignUp, setIsSignUp] = useState(false);
@@ -18,7 +20,7 @@ const Login = () => {
       .required("Phone number is required"),
     email: Yup.string().email("Invalid email").required("Email is required"),
     password: Yup.string()
-      .min(6, "Password must be at least 6 characters")
+      .min(8, "Password must be at least 8 characters")
       .required("Password is required"),
   });
 
@@ -50,12 +52,14 @@ const Login = () => {
         }
       })
       .catch((error) => toast.error("Sign in failed: " + error.message));
+      navigate("/home")
   };
 
   return (
-    <div>
+    <div className={styles.mainContainer}>
+        <div className={styles.loginContainer}> 
       <ToastContainer />
-      <h2>{isSignUp ? "Sign Up" : "Sign In"}</h2>
+      {/* <h2>{isSignUp ? "" : ""}</h2> */}
 
       {isSignUp ? (
         <Formik
@@ -63,35 +67,54 @@ const Login = () => {
           validationSchema={signUpSchema}
           onSubmit={handleSignUp}
         >
-          <Form>
+          <Form className={styles.signUpForm}>
+          <div className={styles.logo}>
+                <img src="./assets/logo.png" alt="logo" />
+            </div>
+            <div>
+                <h1>Welcome 👋</h1>
+                <p>Today is a new day. It's your day. You shape it. 
+                Sign up to start ordering.</p>
+            </div>
             <div>
               <label>Name:</label>
-              <Field type="text" name="name" />
+              <Field placeholder="eg. John A" className={styles.inputField} type="text" name="name" />
+              <span className={styles.errorField}>
               <ErrorMessage name="name" component="div" />
+              </span>
             </div>
 
             <div>
               <label>Phone:</label>
-              <Field type="text" name="phone" />
+              <Field placeholder="Enter your 10 digit mobile number" className={styles.inputField} type="text" name="phone" />
+              <span className={styles.errorField}>
               <ErrorMessage name="phone" component="div" />
+              </span>
             </div>
 
             <div>
               <label>Email:</label>
-              <Field type="email" name="email" />
+              <Field placeholder="Example@email.com"  className={styles.inputField} type="email" name="email" />
+              <span className={styles.errorField}>
               <ErrorMessage name="email" component="div" />
+              </span>
             </div>
 
             <div>
               <label>Password:</label>
-              <Field type="password" name="password" />
+              <Field placeholder="At least 8 characters"  className={styles.inputField} type="password" name="password" />
+              <span className={styles.errorField}>
               <ErrorMessage name="password" component="div" />
+              </span>
             </div>
 
-            <button type="submit">Sign Up</button>
-            <button type="button" onClick={() => setIsSignUp(false)}>
-              Already have an account? Sign In
+            <button className={styles.submitButton} type="submit">Sign Up</button>
+            <div className={styles.logo}>
+            <span>Already have an account? </span>
+            <button className={styles.switchButton} type="button" onClick={() => setIsSignUp(false)}>
+              Sign In
             </button>
+            </div>
           </Form>
         </Formik>
       ) : (
@@ -100,26 +123,46 @@ const Login = () => {
           validationSchema={signInSchema}
           onSubmit={handleSignIn}
         >
-          <Form>
+          <Form className={styles.signInForm}>
+            <div className={styles.logo}>
+                <img src="./assets/logo.png" alt="logo" />
+            </div>
             <div>
-              <label>Email:</label>
-              <Field type="email" name="email" />
+                <h1>Welcome Back 👋</h1>
+                <p>Today is a new day. It's your day. You shape it. 
+                Sign up to start ordering.</p>
+            </div>
+            <div>
+              <label>Email </label><br />
+              <Field placeholder="Example@email.com" className={styles.inputField} type="email" name="email" />
+              <span className={styles.errorField}>
               <ErrorMessage name="email" component="div" />
+              </span>
             </div>
 
             <div>
-              <label>Password:</label>
-              <Field type="password" name="password" />
+              <label>Password </label><br />
+              <Field placeholder="At least 8 characters" className={styles.inputField} type="password" name="password" />
+              <span className={styles.errorField}>
               <ErrorMessage name="password" component="div" />
+              </span>
             </div>
 
-            <button type="submit">Sign In</button>
-            <button type="button" onClick={() => setIsSignUp(true)}>
-              Don't have an account? Sign Up
+            <button className={styles.submitButton} type="submit">Sign In</button>
+            <span className={styles.errorField}></span>
+            <div className={styles.logo}> 
+            <span>Don't you have an account?</span>
+            <button className={styles.switchButton} type="button" onClick={() => setIsSignUp(true)}>
+               Sign Up
             </button>
+            </div>
           </Form>
         </Formik>
       )}
+      </div>
+      <div className={styles.rightHalfContainer}>
+        <img src="./assets/rectangle.png" alt="image" />
+      </div>
     </div>
   );
 };

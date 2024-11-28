@@ -7,12 +7,14 @@ import { AiFillTikTok } from "react-icons/ai";
 import { PiSnapchatLogoBold } from "react-icons/pi";
 
 function Footer() {
+      const playStoreLogo = "https://github.com/user-attachments/assets/4b426798-1071-4bd2-9661-b01e8b1ad12c"
+      const logo = "https://github.com/user-attachments/assets/df8e73a2-e542-4d63-bf49-a75d7a8b87c4"
   return (
     <div className={styles.mainContainer}>
         <div className={styles.upperContainer}>
             <div className={styles.upperContainerChild}>
                 <div>
-                    <img id={styles.appLogo} src="./assets/logo.png" alt="logo" />
+                    <img id={styles.appLogo} src={logo} alt="logo" />
                 </div>
                 <div className={styles.bothButton}>
                     <button className={styles.downloadButton}>
@@ -23,7 +25,7 @@ function Footer() {
                         </div>
                     </button>
                     <button className={styles.downloadButton}>
-                        <img id={styles.playStoreIcon} src="./assets/playStoreLogo.png" alt="logo" className={styles.icon}/>
+                        <img id={styles.playStoreIcon} src={playStoreLogo} alt="logo" className={styles.icon}/>
                         <div className={styles.buttonName}>
                             <p>Get it on</p>
                             <h3>Google Play</h3>

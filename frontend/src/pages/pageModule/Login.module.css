@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+
+.loginContainer {
+    display: flex;
+    flex-direction: column;
+    height: 97vh;
+    width: 50vw;
+    /* background-color: aqua; */
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.rightHalfContainer {
+    height: 100vh;
+    width: 50vw;
+    margin: 20px;
+}
+
+.rightHalfContainer img{
+    width: 50vw;
+    height: 97vh;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+.signInForm {
+    height: 402px;
+    width: 324px;
+    /* background-color:#678987; */
+}
+
+.signInForm p {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.signInForm h1 {
+    margin-top: 20px;
+}
+
+.inputField {
+    width: 324px;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid #00000066;
+    padding: 0px 17px;
+}
+
+.submitButton {
+    width: 324px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    background-color: #FC8A06;
+    margin-bottom: 20px;
+}
+
+.errorField {
+    width: 324px;
+    height: 20px;
+    /* background-color: black; */
+    display: block;
+    color: #ff0000;
+}
+
+.switchButton {
+    background: transparent;
+    border: none;
+    color: #FC8A06;
+}
+
+.signUpForm {
+    height: 590px;
+    width: 324px;
+    /* background-color:#678987; */
+}
+
+.signUpForm p {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.signUpForm h1 {
+    margin-top: 20px;
+}
