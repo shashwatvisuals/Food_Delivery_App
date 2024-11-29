@@ -6,7 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
 import styles from "./pageModule/Login.module.css"
-import Footer from "../components/Footer"
+
 
 const Login = () => {
   const [isSignUp, setIsSignUp] = useState(false);
@@ -32,7 +32,7 @@ const Login = () => {
   // Form submission handlers
   const handleSignUp = (values) => {
     axios
-      .post("http://localhost:5000/api/signup", values)
+      .post("http://localhost:4000/api/user/register", values)
       .then(() => {
         toast.success("Sign up successful!");
         setIsSignUp(false);
@@ -42,17 +42,16 @@ const Login = () => {
 
   const handleSignIn = (values) => {
     axios
-      .post("http://localhost:5000/api/signin", values)
+      .post("http://localhost:4000/api/user/login", values)
       .then((response) => {
         if (response.data.success) {
           toast.success("Sign in successful!");
-          navigate("/home"); // Redirect to home page
+          // navigate("/home"); // Redirect to home page
         } else {
           toast.error("User not found!");
         }
       })
       .catch((error) => toast.error("Sign in failed: " + error.message));
-      navigate("/home")
   };
 
   return (
