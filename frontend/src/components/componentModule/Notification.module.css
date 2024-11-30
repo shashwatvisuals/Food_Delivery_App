@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.introContainer {
+    width: 90vw;
+    height: 550px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid #00000033;
+    border-radius: 9px;
+}
+
+.leftContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+    align-items: flex-start;
+    padding-left: 50px;
+}
+
+.leftContainer h1 {
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.leftContainer span {
+    color: #FC8A06;
+}
+
+
+#search {
+    height: 50px;
+    width: 370px;
+    background-color: #ffffff;
+    border: 1px solid #00000066;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+#search div {
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+    color: #00000099;
+}
+
+#search button{
+    height: 50px;
+    width: 140px;
+    background-color: #FC8A06;
+    border-radius: 30px;
+    border: none;
+    color: #ffffff;
+}
+
+.image1 {
+    position: absolute;
+    z-index: 1;
+    right: 290px;
+    padding-top: 10px;
+}
+
+.image1 img {
+    margin-top: 170px;
+    height: 370px;
+    
+}
+
+.image2 {
+    position: relative;
+    z-index: 2;
+    
+}
+
+.image2 img {
+    margin-top: 85px;
+    height: 465px;
+    
+}
+
+.rightDiv {
+    height: 515px;
+    width: 460px;
+    border-top-left-radius: 40%;
+    background-color: #FC8A06;
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: space-between;
+}
+
+.rightDiv span {
+    font-family: "Poppins";
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: -24px;
+    width: 240px;
+    font-size: 60px;
+    font-weight: 1000;
+    color: transparent;
+    text-shadow: 
+    0px 0px 0px #FC8A06,  /* First layer for base */
+    1px 1px 0px #ffffff,  /* Slight offset for thickness */
+    -1px -1px 0px #ffffff, /* Inverse offset for balance */
+    0px 1px 0px #ffffff, 
+    0px -1px 0px #ffffff;
+}
+
+.notification1 {
+    position: absolute;
+    z-index: 2;
+    right: 160px;
+    margin-top: 10px;
+}
+
+.notification2 {
+    position: absolute;
+    z-index: 2;
+    right: 100px;
+    margin-top: 170px;
+
+}
+
+.notification3 {
+    position: absolute;
+    z-index: 2;
+    right: 160px;
+    margin-top: 329px;
+
+}
+
+.notificationdiv {
+    height: 90px;
+    width: 265px;
+    background-color: #F8F8F8;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+.notificationdiv img {
+    height: 15px;
+    width: 60px;
+}
+
+.notificationdiv h4, .notificationdiv p {
+    font-size: 12px;
+}
+
+.notiLogodiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 5px;
+}
+
+.notiLogodiv p {
+    color:#00000066;
+}

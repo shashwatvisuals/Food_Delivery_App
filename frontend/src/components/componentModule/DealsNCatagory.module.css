@@ -1,0 +1,104 @@
+.dealsContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 90vw;
+    height: 140px;
+    /* background-color:blue; */
+    align-items: center;
+    padding: 0px 25px;
+}
+
+.dishes {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+}
+
+.dishes button {
+    height: 60px;
+    width: 180px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: transparent;
+    border: 1px solid #FC8A06;
+    color: #FC8A06;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    width: 90vw;
+    height: 258px;
+    justify-content: space-between;
+}
+
+.card img {
+    height: 257px;
+    width: 400px;
+    border-radius: 10px;
+    display: block;
+    z-index: 0;
+    position: relative;
+}
+
+.cardDetails {
+    position: relative;
+    z-index: 1;
+    bottom: 126px;
+    left: 33px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.cardDetails span{
+    position: relative;
+    display: block;
+    top: -130px;
+    left: 270px;
+    height: 54px;
+    width: 68px;
+    background-color: #000000;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: center;
+    line-height: 50px;
+    box-shadow: 0px 4px 8px #e3dddd33;
+}
+
+.cardDetails h6 {
+    color: #FC8A06;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.cat {
+    height: 125px;
+    width: 90vw;
+    /* text-align: center; */
+    line-height: 125px;
+}
+
+.categories {
+    display: flex;
+    flex-direction: row;
+    width: 90vw;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.categories img {
+    height: 180px;
+    width: 200px;
+}
+
+.cardCategory {
+    border: 1px solid #0000001A;
+    border-radius: 10px;
+}
+
+.cardCategory div {
+    background-color: #F5F5F5;
+    padding-left: 15px;
+}
+

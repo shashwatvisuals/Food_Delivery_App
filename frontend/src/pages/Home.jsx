@@ -1,8 +1,15 @@
 import React from 'react'
-import Footer from "../components/Footer"
+import Header from '../components/Header'
+import Notification from '../components/Notification'
+import DealsNCatagory from '../components/DealsNCatagory'
+import styles from './pageModule/Home.module.css'
+
 function Home() {
   return (
-    <div>
+    <div className={styles.mainContainer}>
+      <Header />
+      <Notification />
+      <DealsNCatagory />
     </div>
   )
 }

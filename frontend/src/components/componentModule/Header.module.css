@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Poppins";
+}
+
+.topMostDiv {
+    width: 90vw;
+    height: 60px;
+    background-color: #FAFAFA;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    align-items: center;
+    border: 1px solid #0000001A;
+    
+}
+
+.highlight {
+    text-decoration: underline;
+    color: #FC8A06;
+    font-weight: 700;
+    margin-right: 91px;
+
+}
+
+.cartDiv {
+    display: flex;
+    /* width: auto; */
+    justify-content: end;
+}
+
+.cartButton {
+    width: 340px;        
+    height: 60px;     
+    background-color: #028643;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    color: #ffffff;
+}
+
+#cartIcon {
+    display: flex;
+    align-items: center;
+    gap:10px;
+    padding-right: 25px;
+
+}
+
+#verticalLines {
+    height: 60px;
+    width: 100px;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    background-color: #028643;
+    right:10px;
+}
+
+#downArrow {
+margin-left:19px;
+height: 40px;
+width: 40px;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    height: 147px;
+    width: 90vw;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#homeLink {
+    height: 45px;
+    width: 100px;
+    border-radius: 25px;
+    background-color: #FC8A06;
+    color: #ffffff;
+    text-align: center;
+    line-height: 45px;
+}
+
+#logo {
+    height: 90px;
+}
+
+#logo img{
+    height: 50px;
+    margin-top: 15px;
+
+
+}
+
+.navbarLinks {
+    height: 90px;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+
+}
+     
+#user {
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+    height: 55px;
+    border-radius: 30px;
+    gap: 25px;
+    background-color: #03081F;
+    border: none;
+    color: #ffffff;
+    justify-content: center;
+    align-items: center;
+    padding-right: 17px;
+}
+
+#userLogo {
+    height: 25px;
+    width: 25px;
+}
+
