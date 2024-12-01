@@ -1,0 +1,102 @@
+.mainContainer {
+    width: 90vw;
+    height: 652px;
+    /* background-color: aquamarine; */
+    
+}
+
+.hiddenContainer {
+    width: 90vw;
+    height: 602px;
+    position: absolute;
+    background-color: #EEEEEE;
+    margin-top: 50px;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+
+.banner {
+    position: absolute;
+    padding-left: 15px;
+    z-index: 2;
+
+}
+
+#underLine {
+    text-decoration: underline;
+    color: #FC8A06;
+}
+
+.appLogo img{
+    height: 41px;
+    width: 199px;
+}
+
+.appLogo span {
+    font-family: 'Poppins';
+    font-size: 33px;
+    font-weight: 900;
+    -webkit-text-stroke: 3px #232020;
+    letter-spacing: 2px;
+    
+}
+
+.rightDiv {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 206px;
+    z-index: 1;
+    right: 100px;
+    gap: 25px;
+}
+
+.rightDiv h1 {
+    height: 69px;
+    width: 530px;
+    background-color: #03081F;
+    line-height: 66px;
+    padding-left: 140px;
+    border-radius: 35px;
+    color: #ffffff;
+}
+
+.bothButton {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: center;
+}
+
+.downloadButton {
+    width: 189px;
+    height: 61px;
+    background: #000000;
+    border-radius: 5px;
+    border: none;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    color: #ffffff;
+    display: flex;
+    top : 5px;
+    height: 40px;
+    width: 50px;
+    margin-right: 5px;
+}
+
+#playStoreIcon {
+    width: 40px;
+    margin-right: 16px;
+}
+
+.downloadButton {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 10px;
+}

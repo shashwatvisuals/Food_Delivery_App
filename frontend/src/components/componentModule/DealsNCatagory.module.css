@@ -95,6 +95,10 @@
 .cardCategory {
     border: 1px solid #0000001A;
     border-radius: 10px;
+    height: 225px;
+    /* width: 199px; */
+    background-color: #F5F5F5;
+    border: none;
 }
 
 .cardCategory div {

@@ -94,7 +94,7 @@ function DealsNCatagory() {
             </div>
             
             <div className={styles.cardCategory}>
-                <img src="../public/assets/Rectangle6.png" alt="image" />
+                <img src="../assets/Rectangle6.png" alt="image" />
                 <div>
                     <h3>Soups</h3>
                     <p>32 Restaurants</p>
