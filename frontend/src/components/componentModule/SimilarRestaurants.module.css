@@ -1,0 +1,33 @@
+.cat {
+    height: 125px;
+    width: 90vw;
+    /* text-align: center; */
+    line-height: 125px;
+}
+
+.restaurants {
+    display: flex;
+    flex-direction: row;
+    width: 90vw;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.restaurants img {
+    height: 180px;
+    width: 200px;
+}
+
+.cardCategory {
+    border: 1px solid #0000001A;
+    border-radius: 10px;
+    height: 225px;
+    width: 200px;
+    background-color: #FC8A06;
+}
+
+.cardCategory div {
+    background-color: #FC8A06;
+    padding-left: 15px;
+    color: #ffffff;
+}

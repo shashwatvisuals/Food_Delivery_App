@@ -1,0 +1,46 @@
+.mainDiv {
+    display: flex;
+    flex-direction: row;
+    width: 90vw;
+    height: 460px;
+    background-color: #FBFBFB;
+    justify-content: center;
+    margin: 20px 5vw;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    padding: 30px 5vw;
+    gap: 30px;
+}
+
+.card {
+    width: calc(80vw/3);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    /* padding: 20px; */
+}
+
+.card span {
+    font-weight: 700;
+}
+
+.card p {
+    font-size: 14px;
+}
+
+.card div {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+#rightMostCard {
+    margin-top: -42px;
+    padding-left: 40px;
+}
+
+#rightMostCard h2{
+    /* padding-bottom: 20px; */
+}

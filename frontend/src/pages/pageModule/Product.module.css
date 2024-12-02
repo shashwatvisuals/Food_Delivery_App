@@ -1,0 +1,171 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+
+.mainDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.searchBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90vw;
+}
+
+.search {
+    height: 40px;
+    width: 220px;
+    border: 1px solid #03081F;
+    border-radius: 30px;
+    padding-left: 10px;
+}
+
+.searchIcon {
+    margin-bottom: -4px;
+    cursor: pointer;
+}
+
+.search input {
+    border: none;
+    outline: none;
+    height: 37px;
+    margin-left: 10px;
+    border-radius: 30px;
+    padding-left: 3px;
+}
+
+.header {
+  height: 90px;
+  width: 100vw;
+  background-color: #FC8A06;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 5vw;
+  color: #ffffff;
+  margin: 40px 0px;
+}
+
+#selectedlink {
+  height: 30px;
+  width: 90px;
+  background-color: #000000;
+  border-radius: 20px;
+  text-align: center;
+  line-height: 30px;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid #ccc; */
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    height: 200px;
+    width: 400px;
+    background-color: #FDFDFD;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  
+  .itemList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    font-size: 12px;
+    height: 80px;
+    /* background-color: bisque; */
+    margin-top: 10px;
+
+  }
+  
+  
+  .price {
+    font-weight: bold;
+  }
+  
+  .image {
+    position: relative;
+    width: 170px;
+    height: 170px;
+    border-radius: 10px;
+    display: block;
+    z-index: 0;
+    left: 77px;
+    /* object-fit: cover; */
+
+  }
+
+  .addButton {
+    position: relative;
+    height: 70px;
+    width: 76px;
+    background-color: #ffffffE6;
+    left: 15px;
+    bottom: -116px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    border: none;
+    /* z-index: 1; */
+}
+
+.addButtonDiv {
+    position: relative;
+    z-index: 1;
+}
+
+.plusIcon {
+    height: 30px;
+    width: 30px;
+}
+
+.cardAlign {
+    display: flex;
+    width: auto;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 43px calc((100vw - 90vw) / 2);
+}
+
+/* .basketContainer {
+  width: 300px;
+  height: 100vh;
+  background-color: aqua;
+} */
+
+.productDiv {
+  width: auto;
+}
+
+.productNbasketDiv {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.basketContainer {
+  width: 350px;
+  max-height:fit-content;
+  background-color: aqua;
+  padding: 20px;
+  border-radius: 8px;
+  margin-right: 5vw;
+  transition: transform 1s ease-in-out;
+}
+
+

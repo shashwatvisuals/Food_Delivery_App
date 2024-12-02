@@ -1,0 +1,105 @@
+.mainDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: -100px;
+}
+
+/* .header {
+    height: 90px;
+    width: 100vw;
+    background-color: #FC8A06;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 5vw;
+    color: #ffffff;
+    margin: 40px 0px;
+}
+
+#selectedlink {
+    height: 30px;
+    width: 90px;
+    background-color: #000000;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 30px;
+} */
+
+.card {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0px 5vw;
+    margin-top: 30px;
+}
+
+.card img {
+    height: 257px;
+    width: 400px;
+    border-radius: 10px;
+    display: block;
+    z-index: 0;
+    position: relative;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.5) 60%);
+    pointer-events: none;
+    mix-blend-mode: darken;
+}
+
+.cardDetails {
+    position: relative;
+    z-index: 1;
+    bottom: 126px;
+    left: 33px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.cardDetails span{
+    position: relative;
+    display: block;
+    top: -130px;
+    left: 270px;
+    height: 54px;
+    width: 68px;
+    background-color: #000000;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: center;
+    line-height: 50px;
+    box-shadow: 0px 4px 8px #e3dddd33;
+}
+
+.cardDetails h6 {
+    color: #FC8A06;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.cardDetails h4 {
+    width: 165px;
+}
+
+.addButton {
+    position: relative;
+    height: 70px;
+    width: 76px;
+    background-color: #ffffffE6;
+    left: 291px;
+    bottom: 28px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+}
+
+#plusIcon {
+    height: 30px;
+    width: 30px;
+}
