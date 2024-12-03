@@ -367,7 +367,7 @@ function OrderSuccessful() {
 
     try {
       setIsSubmitting(true);
-      const response = await axios.post('http://localhost:4000/api/order/place', orderData);
+      const response = await axios.post('https://food-delivery-backend-vf6v.onrender.com/api/order/place', orderData);
       console.log('Order placed successfully:', response.data);
       setIsSubmitting(false);
     } catch (error) {
