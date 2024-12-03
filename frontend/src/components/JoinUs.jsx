@@ -3,7 +3,8 @@ import styles from './componentModule/JoinUs.module.css'
 
 function JoinUs() {
   return (
-    <div>
+    <>
+    <div className={styles.mainDiv}>
     <div className={styles.joinUs}>
     <div>
         <img src="https://images.pexels.com/photos/887827/pexels-photo-887827.jpeg?auto=compress&cs=tinysrgb&w=600" alt="image" />
@@ -46,7 +47,7 @@ function JoinUs() {
                 <h5>Are there any special discounts or promotions available?</h5>
                 <h5>Is Order.UK available in my area?</h5>
             </div>
-            <div id={styles.middlerightdiv}>     
+    <div id={styles.middlerightdiv}>     
         <div className={styles.allCard}>
             <div className={styles.card123}>
                 <h5>Place an Order!</h5>
@@ -65,17 +66,18 @@ function JoinUs() {
                 <img src="../assets/order.png" alt="image" />
                 <p>Receive your order at a lighting fast speed!</p>
             </div>
-            </div>
+        </div>
        
             <div className={styles.lastDiv}>
                 <p>Order.UK simplifies the food ordering process. Browse through our diverse menu, select your favorite dishes, and proceed to checkout. Your delicious meal will be on its way to your doorstep in no time!</p>
             </div>
-        </div>   
+    </div>   
         </div>
             </div>
         </div>
-
-        <div className={styles.stats}>
+    </div>
+    
+    <div className={styles.stats}>
             <div className={styles.statsBorder}>
             <span>546+</span>
             <h4>Registered Riders</h4>
@@ -96,7 +98,7 @@ function JoinUs() {
             <h4>Food items</h4>
             </div>
         </div>
-    </div>
+    </>
   )
 }
 

@@ -1,0 +1,53 @@
+.logoNUser {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    #hamburger {
+        display: flex;
+        align-items: center;
+        /* height: 60px; */
+        width: 100px;
+        /* background-color: #FC8A06; */
+        justify-content: center;
+        border-left: 1px solid #000000;
+    }
+
+    #hamburgerLogo {
+        height: 60px;
+        width: 60px;
+    }
+
+    #logo {
+        padding: 10px;
+    }
+
+    .mobileNavbar {
+        display: block;
+        width: 100vw;
+        /* background-color: aqua; */
+    }
+
+    .logoNUser {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 100px;
+    }
+
+    #user {
+        display: flex;
+        flex-direction: row;
+        width: 50vw;
+        height: 90px;
+        border-radius: 0px;
+        gap: 25px;
+        background-color:#FC8A06;
+        border: none;
+        color: #ffffff;
+        justify-content: center;
+        align-items: center;
+        padding-right: 17px;
+    }
+    
+}

@@ -27,7 +27,7 @@ function Notification() {
       <span>1</span>
       <div className={styles.notificationdiv}>
         <div className={styles.notiLogodiv}>
-          <img src="/assets/logo.png" alt="logo" />
+          <img src="logo.png" alt="logo" />
           <p>now</p>
         </div>
         <h4>We’ve Received your order!</h4>
@@ -39,7 +39,7 @@ function Notification() {
       <span>2</span>
       <div className={styles.notificationdiv}>
       <div className={styles.notiLogodiv}>
-          <img src="/assets/logo.png" alt="logo" />
+          <img src="logo.png" alt="logo" />
           <p>now</p>
         </div>
         <h4>Order Accepted! </h4>
@@ -51,7 +51,7 @@ function Notification() {
       <span>3</span>
       <div className={styles.notificationdiv}>
       <div className={styles.notiLogodiv}>
-          <img src="/assets/logo.png" alt="logo" />
+          <img src="logo.png" alt="logo" />
           <p>now</p>
         </div>
         <h4>Your rider's nearby</h4>

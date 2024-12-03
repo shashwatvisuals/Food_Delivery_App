@@ -1,0 +1,194 @@
+.mainDiv {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+#goBack {
+    margin-left: 5vw ;
+    width: 300px;
+}
+
+.paymentMethodsNPay {
+    display: flex;
+    flex-direction: row; 
+    padding: 30px 5vw;
+    justify-content: space-between;
+}
+
+.paymentMethods {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.paymentMethodsDiv {
+    width: 50vw;
+    height: 60px;
+    border-radius: 30px;
+    border: 1px solid #FC8A06;
+    display: flex;
+    align-items: center;
+    padding: 0px 5px;
+}
+
+#arrow {
+    margin-right: 10px;
+    color: #FC8A06;
+}
+
+.flexdRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 47vw;
+}
+
+.flexdRow div {
+    margin-left: 20px;
+}
+
+.flexdRow h3 {
+    color: #000000;
+}
+
+.flexdRow p {
+    color: #434343;
+}
+
+#wallet span{
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #2D3748;
+    border-radius: 50%;
+    background-color: #FFE8CE;
+    color: #FC8A06;
+}
+
+.card h3 {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #2D3748;
+    border-radius: 50%;
+    background-color: #FFE8CE;
+    font-style: italic;
+    color: #FC8A06;
+    font-weight: 900;
+    margin-right: 20px;
+}
+
+.flexdRowCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 47vw;
+}
+
+.flexdRowCard span {
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#circle {
+    height: 30px;
+    width: 30px;
+    color: #636262;
+}
+
+#addCard div{
+    margin: 0px 15px;
+}
+
+#plus {
+    height: 30px;
+    width: 30px;
+}
+
+.paymentDetails {
+    display: flex;
+    flex-direction: column;
+    width: 35vw;
+    /* gap: 10px; */
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+
+.totalPayedAmount {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    align-items: center;
+    margin: 0px 20px;
+    border-bottom: 1px solid #000000;
+}
+
+.paymentDetails button {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin: 20px 20px;
+    border-radius: 30px;
+    background-color: #FC8A06;
+    border: none;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+    #header {
+        display: none;
+    }
+
+    #footer {
+        display: none;
+    }
+
+    .paymentMethodsNPay {
+        display: flex;
+        flex-direction: column; 
+        padding: 30px 5vw;
+        gap: 40px;
+    }
+
+    .paymentMethodsDiv {
+        width: 90vw;
+        height: 60px;
+        border-radius: 30px;
+        border: 1px solid #FC8A06;
+        display: flex;
+        align-items: center;
+        padding: 0px 5px;
+    }
+
+    .flexdRow {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 87vw;
+    }
+
+    .flexdRowCard {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 87vw;
+    }
+
+    .paymentDetails {
+        display: flex;
+        flex-direction: column;
+        width: 90vw;
+        /* gap: 10px; */
+        border: 1px solid #000000;
+        border-radius: 10px;
+    }
+}

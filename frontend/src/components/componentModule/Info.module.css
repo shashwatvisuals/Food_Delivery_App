@@ -41,6 +41,8 @@
     padding-left: 40px;
 }
 
-#rightMostCard h2{
-    /* padding-bottom: 20px; */
+@media (max-width: 600px) {
+    .mainDiv{
+        display: none;
+    }
 }

@@ -6,9 +6,12 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
 import styles from "./pageModule/Login.module.css"
+import Footer from "../components/Footer";
 
 
 const Login = () => {
+  const backendURL = import.meta.env.VITE_BACKEND_URL
+  // console.log("backend url:",backendURL)
   const [isSignUp, setIsSignUp] = useState(false);
   const navigate = useNavigate();
   useEffect(() => {
@@ -36,7 +39,7 @@ const Login = () => {
   // Form submission handlers
   const handleSignUp = (values) => {
     axios
-      .post("http://localhost:4000/api/user/register", values)
+      .post(`${backendURL}/api/user/register`, values)
       .then(() => {
         toast.success("Sign up successful!");
         setIsSignUp(false);
@@ -46,47 +49,31 @@ const Login = () => {
 
   const handleSignIn = (values) => {
     axios
-      .post("http://localhost:4000/api/user/login", values)
+      .post(`${backendURL}/api/user/login`, values)
       .then((response) => {
         if (response.data.success) {
           toast.success("Sign in successful!");
           
           localStorage.setItem("authToken", response.data.token);
           localStorage.setItem("userName", response.data.user.name);
-
-
-
-
-
-
-        // Fetch protected data using the token
         const token = localStorage.getItem("authToken");
         
         // Example of fetching a protected route after successful login
         axios
-          .get("http://localhost:4000/protected-route", {
+          .get(`${backendURL}/api/protected`, {
             headers: {
               Authorization: `Bearer ${token}`,
             },
           })
           .then((protectedResponse) => {
-            console.log("Protected Data:", protectedResponse.data);
+            // console.log("Protected Data:", protectedResponse.data);
             // Handle the protected data here
           })
           .catch((error) => {
             toast.error("Failed to fetch protected data: " + error.message);
           });
-
         // Optionally, navigate to another page
         navigate("/home");
-
-
-
-
-
-
-
-
         } else {
           toast.error("User not found!");
         }
@@ -96,6 +83,7 @@ const Login = () => {
 
   return (
     <div className={styles.mainContainer}>
+      <div className={styles.upperDiv}>
         <div className={styles.loginContainer}> 
       <ToastContainer />
       {/* <h2>{isSignUp ? "" : ""}</h2> */}
@@ -108,7 +96,7 @@ const Login = () => {
         >
           <Form className={styles.signUpForm}>
           <div className={styles.logo}>
-                <img src="./assets/logo.png" alt="logo" />
+                <img src="logo.png" alt="logo" />
             </div>
             <div>
                 <h1>Welcome 👋</h1>
@@ -164,7 +152,7 @@ const Login = () => {
         >
           <Form className={styles.signInForm}>
             <div className={styles.logo}>
-                <img src="./assets/logo.png" alt="logo" />
+                <img src="logo.png" alt="logo" />
             </div>
             <div>
                 <h1>Welcome Back 👋</h1>
@@ -202,6 +190,8 @@ const Login = () => {
       <div className={styles.rightHalfContainer}>
         <img src="./assets/rectangle.png" alt="image" />
       </div>
+      </div>
+      <Footer />
     </div>
   );
 };
