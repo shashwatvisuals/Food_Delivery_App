@@ -5,11 +5,112 @@ body {
   overflow-x: hidden;
 }
 
+.parentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .mainDiv {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.restroInfo {
+  position: relative;
+  background-image: url('https://images.pexels.com/photos/572981/pexels-photo-572981.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px; /* Adjust the height as needed */
+  width: 90vw;
+  background-color: #03081FE5;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 80px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.restroInfo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(20, 49, 84, 0.82); /* Add your desired color with opacity */
+  z-index: 0; 
+  border-radius: 10px;
+}
+
+.restroInfo > * {
+  position: relative; /* Make sure child elements stay on top of the overlay */
+  z-index: 1; /* This ensures the content stays above the overlay */
+}
+
+.rrd {
+  background-image: url('https://images.pexels.com/photos/5745991/pexels-photo-5745991.jpeg?auto=compress&cs=tinysrgb&w=600');
+  height: 250px;
+  width: 350px;
+  border-radius: 10px;
+}
+
+.rld {
+  width: 450px;
+  height: 250px;
+  background-color: transparent;
+  padding-top: 70px;
+  /* padding-left: 30px; */
+  color: #ffffff;
+}
+
+.resturentName {
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.patch h4 {
+  height: 40px;
+  width: 250px;
+  background-color: transparent;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 20px;
+  border: 1px solid #ffffff;
+  margin-top: 10px;
+}
+
+.patch span {
+  padding-right: 10px;
+}
+
+.rating {
+  position: relative;
+  top: 169px;
+  right: 35px;
+}
+
+.rating img {
+  height: 90px;
+}
+
+.notify {
+  position: relative;
+  height: 40px;
+  width: 250px;
+  background-color: #FC8A06;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  gap: 10px;
+  bottom: 40px;
 }
 
 .searchBar {
