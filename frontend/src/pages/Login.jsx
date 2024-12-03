@@ -36,7 +36,7 @@ const Login = () => {
   // Form submission handlers
   const handleSignUp = (values) => {
     axios
-      .post("http://localhost:4000/api/user/register", values)
+      .post("https://food-delivery-backend-vf6v.onrender.com/api/user/register", values)
       .then(() => {
         toast.success("Sign up successful!");
         setIsSignUp(false);
@@ -46,7 +46,7 @@ const Login = () => {
 
   const handleSignIn = (values) => {
     axios
-      .post("http://localhost:4000/api/user/login", values)
+      .post("https://food-delivery-backend-vf6v.onrender.com/api/user/login", values)
       .then((response) => {
         if (response.data.success) {
           toast.success("Sign in successful!");
@@ -64,7 +64,7 @@ const Login = () => {
         
         // Example of fetching a protected route after successful login
         axios
-          .get("http://localhost:4000/protected-route", {
+          .get("https://food-delivery-backend-vf6v.onrender.com/protected-route", {
             headers: {
               Authorization: `Bearer ${token}`,
             },
