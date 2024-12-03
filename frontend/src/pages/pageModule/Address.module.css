@@ -1,5 +1,254 @@
-.mainContainer { padding: 20px; }
-.addAddressDiv { cursor: pointer; margin: 10px 0; }
-.defaultAddress, .savedAddress { border: 1px solid #ccc; padding: 10px; margin: 10px 0; }
-.modal { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; z-index: 1000; }
+.parent {
+    height: 90vh;
+}
 
+.mainContainer { 
+    padding: 20px;
+    padding: 0px 5vw;
+
+}
+
+.addressParent {
+    display: flex;
+    gap: 30px;
+
+}
+
+.addAddressDiv {
+    cursor: pointer;
+    margin: 10px 0;
+    height: 200px;
+    width: 250px;
+    border: 1px dashed #AFAFAF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.addAddressDiv span {
+    height: 70px;
+    width: 70px;
+    border: none;
+    background-color: #fc890630;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.addAddressDiv span {
+    height: 70px;
+    width: 70px;
+    border: none;
+    background-color: #fc890630;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+#plusLogo {
+    height: 30px;
+    width: 30px;
+    color: #fc8906;
+}
+
+
+.defaultAddress, .savedAddress {
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    margin: 10px 0;
+    height: 200px;
+    width: 250px;
+    border: 1px solid #AFAFAF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    border-radius: 10px;
+    
+}
+
+#nameRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+} 
+
+#nameRow button {
+    height: 25px;
+    width: 100px;
+    color: #fc8906;
+    border: none;
+    border-radius: 30px;
+    background-color: #fc890630;
+
+}
+
+.editDel {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.editDel button{
+    color: #fc8906;
+    border: none;
+    background-color: transparent;
+    padding-right: 5px;
+}
+
+.edit {
+    height: 13px;
+    width: 1px;
+    border-right: 1px solid #afafaf;
+}
+
+#remove {
+    padding-left: 5px;
+}
+
+.modal {
+    position: fixed;
+    top: 50%; left: 50%; 
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px; 
+    z-index: 1000;
+    height: 270px;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 10px;
+}
+
+.minorDetails {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.minorDetails select , .minorDetails input {
+    height: 40px;
+    width: calc((60vw - 100px)/4);
+    border: 1px solid #000000a5;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+
+.addNsave {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.addNsave textarea {
+    width: calc(60vw - 40px);
+    height: 110px;
+    border: 1px solid #000000a5;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.addNsave button {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: #fc8906;
+    color: #ffffff;
+}
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000a5; 
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 600px) {
+    .addressParent {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    
+    }
+
+    .addAddressDiv {
+        cursor: pointer;
+        margin: 10px 0;
+        height: 100px;
+        width: 90vw;
+        border: 1px dashed #AFAFAF;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        gap: 20px;
+    }
+
+    .modal {
+        position: fixed;
+        top: 50%; left: 50%; 
+        transform: translate(-50%, -50%);
+        background: white;
+        padding: 20px; 
+        z-index: 1000;
+        height: fit-content;
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        border-radius: 10px;
+    }
+
+    .minorDetails {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px
+    }
+    
+    .minorDetails select , .minorDetails input {
+        height: 40px;
+        width: calc((90vw - 60px));
+        border: 1px solid #000000a5;
+        border-radius: 5px;
+        padding-left: 5px;
+    }
+
+    .addNsave {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 2.8vw;
+    }
+    
+    .addNsave textarea {
+        width: calc(90vw - 60px);
+        height: 110px;
+        border: 1px solid #000000a5;
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    .addNsave button {
+        width: calc(90vw - 60px);
+        height: 30px;
+        border-radius: 5px;
+        border: none;
+        background-color: #fc8906;
+        color: #ffffff;
+    }
+
+}

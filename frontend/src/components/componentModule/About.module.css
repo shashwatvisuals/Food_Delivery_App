@@ -81,6 +81,10 @@
     align-items: center;
 }
 
+#bannerM {
+    display: none;
+}
+
 .icon {
     color: #ffffff;
     display: flex;
@@ -99,4 +103,72 @@
     display: flex;
     flex-direction: row;
     padding: 10px 10px;
+}
+
+@media (max-width: 600px) {
+
+    .mainContainer {
+        width: 90vw;
+        height: auto;
+        background-color: #E0E1DC;
+        
+    }
+    .hiddenContainer {
+        display: none;
+    }
+
+    .banner {
+        display: none;
+       
+    }
+
+    #bannerM {
+        display: block;
+    }
+
+    #bannerM img {
+        width: 90vw;
+    }
+
+    .rightDiv {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        z-index: 0;
+        gap: 25px;
+    }
+
+    .rightDiv h1 {
+        display: flex;
+        justify-content: center;
+        background: none;
+        height: 69px;
+        width: 70vw;
+        font-size: 25px;
+        line-height: 69px;
+        padding-left: 0px;
+        color: #0e0d0d;
+    }
+
+    .downloadButton {
+        width: 146px;
+        height: 52px;
+        background: #000000;
+        border-radius: 5px;
+        border: none;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+    }
+
+    .buttonName h3{
+        font-size: 12px;
+    }
+
+    .buttonName h3{
+        font-size: 12px;
+    }
+
 }

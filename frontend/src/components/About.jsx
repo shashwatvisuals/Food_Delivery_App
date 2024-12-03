@@ -12,7 +12,7 @@ function About() {
 
       <div className={styles.rightDiv}>
         <div className={styles.appLogo}>
-        <img  src="../assets/logo.png" alt="logo" />
+        <img  src="logo.png" alt="logo" />
         <span>ing is more</span>
         </div>
         <h1><span id={styles.underLine}>Personalised</span> & Instant</h1>
@@ -33,6 +33,9 @@ function About() {
                         </div>
                     </button>
                 </div>
+                <div id={styles.bannerM}>
+        <img src="../assets/laughing.png" alt="image" />
+      </div>
       </div>
     </div>
   )

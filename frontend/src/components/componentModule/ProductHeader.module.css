@@ -5,28 +5,6 @@
     margin-bottom: -100px;
 }
 
-/* .header {
-    height: 90px;
-    width: 100vw;
-    background-color: #FC8A06;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 5vw;
-    color: #ffffff;
-    margin: 40px 0px;
-}
-
-#selectedlink {
-    height: 30px;
-    width: 90px;
-    background-color: #000000;
-    border-radius: 20px;
-    text-align: center;
-    line-height: 30px;
-} */
-
 .card {
     display: flex;
     flex-direction: row;
@@ -102,4 +80,12 @@
 #plusIcon {
     height: 30px;
     width: 30px;
+}
+
+@media (max-width: 600px) {
+
+    .mainDiv {
+        display: none;
+    }
+
 }

@@ -5,15 +5,23 @@ import { PiPersonSimpleBikeBold } from "react-icons/pi";
 import { CiSearch } from 'react-icons/ci';
 import { LuShare2 } from 'react-icons/lu';
 import { LuClock10 } from "react-icons/lu";
+import { IoArrowForwardCircle } from "react-icons/io5";
+import { IoArrowDownCircle } from "react-icons/io5";
+import { RiDeleteBin2Fill } from "react-icons/ri";
+import { MdDeliveryDining } from "react-icons/md";
+import { PiGift } from "react-icons/pi";
 import styles from './pageModule/Product.module.css';
 import Header from '../components/Header';
 import ProductHeader from '../components/ProductHeader';
 import Info from '../components/Info';
 import SimilarRestaurants from '../components/SimilarRestaurents';
+import Footer from '../components/Footer';
 import { useNavigate,useLocation } from 'react-router-dom';
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from "react-toastify";
 
 function Product() {
+  const backendURL = import.meta.env.VITE_BACKEND_URL 
+
   const userName = localStorage.getItem("userName");
   const navigate = useNavigate();
   const { state } = useLocation();
@@ -41,7 +49,7 @@ function Product() {
   useEffect(() => {
     const fetchFoodData = async () => {
       try {
-        const response = await fetch('http://localhost:4000/api/food/list');
+        const response = await fetch(`${backendURL}/api/food/list`);
         const result = await response.json();
         if (result.success) {
           setFoodItems(result.data); // Set the fetched data in state
@@ -64,6 +72,7 @@ function Product() {
 
   // Handle adding items to the cart
   const addToCart = (item) => {
+    toast.success('Item Added to cart');
     setCart((prevCart) => {
       const existingItem = prevCart.find((cartItem) => cartItem._id === item._id);
       if (existingItem) {
@@ -80,6 +89,7 @@ function Product() {
 
   // Handle removing one item from the cart
   const removeFromCart = (itemId) => {
+    toast.info('Item removed from cart');
     setCart((prevCart) => {
       return prevCart
         .map((cartItem) =>
@@ -96,8 +106,9 @@ function Product() {
 
   return (
     <div className={styles.parentContainer}>
+      <ToastContainer autoClose={1000}/>
       <Header onCartClick={toggleBasket} userName={userName}/>
-<div>
+<div className={styles.restroInfoMain}>
       <div className={styles.restroInfo}>
           <div className={styles.rld}>
             <p>I'm lovin' it!</p>
@@ -150,9 +161,9 @@ function Product() {
             transition: 'width 10s ease',
           }}
         >
-          <ProductHeader />
+          <ProductHeader id={styles.productHead}/>
           {Object.keys(groupedItems).map((category) => (
-            <div key={category}>
+            <div key={category} className={styles.itemsCard}>
               <h2>{category}</h2>
               <div className={styles.cardAlign}>
                 {groupedItems[category].map((item) => (
@@ -164,59 +175,78 @@ function Product() {
         </div>
 
         {isBasketVisible && (
+          <>
+          <div onClick={toggleBasket} className={styles.overlayDiv}></div>
           <div className={styles.basketContainer}>
             <div className={styles.shareCart}>
-              <span><LuShare2/></span>
+              <span ><LuShare2 id={styles.shareIcon}/></span>
               <h4>Share this cart <br /> with your friends</h4>
               <button>Copy Link</button>
             </div>
 
             <div className={styles.myBasket}>
-              <div>
-                <h2><img src="../assets/Basket.png" alt="Image" />My Basket</h2>
+              <div className={styles.basketHead}>
+              <img src="https://github.com/user-attachments/assets/6e7605b3-8872-45f6-91ab-a25c8acf03b6" alt="Image" />
+                <h2>My Basket</h2>
               </div>
               <div className={styles.addedItems}>
                 {cart.length === 0 ? (
-                  <p>Your cart is empty</p>
+                  <p></p>
                 ) : (
                   cart.map((item) => (
                     <div key={item._id} className={styles.cartItem}>
-                      <p>{item.name} - ₹{item.price} x {item.quantity}</p>
+                      <div className={styles.itemQuantity}>{item.quantity}X</div>
+                      <div className={styles.itemNameNPrice}>
+                      <h4>₹{item.price}</h4>
+                      <p>{item.name}</p>
+          
+                      </div>
                       <button
                         className={styles.deleteButton}
                         onClick={() => removeFromCart(item._id)}
                       >
-                        Delete
+                        <RiDeleteBin2Fill id={styles.deleteLogo}/>
                       </button>
                     </div>
                   ))
                 )}
               </div>
-              <div>
+              <div className={styles.deleteButton}>
+              <div className={styles.bill}>
                 <h2>Sub Total:<span>₹{totalAmount}</span></h2>
                 <h2>Discounts:<span>-₹10.00</span></h2>
                 <h2>Delivery Fee:<span>₹10.00</span></h2>
-              </div>
-              <div>
-                <h3>Total to pay <span>₹{totalPayable}</span></h3>
-              </div>
-              <div>
-                <div>
-                  <h4>Delivery</h4>
-                  <p>Starts at 17:50</p>
                 </div>
-                <div>
+              </div>
+              <div  className={styles.totalNCoupon}>
+                <h3>Total to pay <span>₹{totalPayable}.00</span></h3>
+                <p>Choose your free item <span><IoArrowDownCircle id={styles.downArrow}/>
+                </span></p>
+                <p>Apply Coupon Code here <span><IoArrowForwardCircle id={styles.rightArrow}/></span></p>
+              </div>
+                <div className={styles.checkoutDiv}>
+                <div className={styles.time}>
+                <div id={styles.deliveryTimeDiv}>
+                  <span><MdDeliveryDining className={styles.timeLogo}/></span>
+                  <h4>Delivery</h4>
+                  <p>Starts at 17:50 </p>
+                </div>
+                <div id={styles.collectionDiv}>
+                  <span><PiGift className={styles.timeLogo}/></span>
                   <h4>Collection</h4>
                   <p>Starts at 16:50</p>
                 </div>
+                </div>
+              <button id={styles.checkout} onClick={handleCheckout}><span><IoArrowForwardCircle id={styles.checkoutLogo}/></span> Checkout!</button>
               </div>
-              <button onClick={handleCheckout}>Checkout!</button>
             </div>
           </div>
+          </>
         )}
       </div>
       <Info />
       <SimilarRestaurants />
+      <Footer />
     </div>
   );
 }

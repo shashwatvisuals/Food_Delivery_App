@@ -1,66 +1,22 @@
-// import React, { useState } from 'react';
-// import { FaArrowLeft } from 'react-icons/fa';
-// import Header from '../components/Header';
-// import { useNavigate, useLocation } from 'react-router-dom';
-// import styles from './pageModule/Payment.module.css'
-
-// function Payment() {
-//   return (
-//     <div>
-//       <Header/>
-//       <div>
-//       <h2 style={{ cursor: 'pointer' }}>
-//           <FaArrowLeft /> Choose and Pay
-//           <div>
-//           <div className={styles.paymentMethods}>
-//             <div>
-//                 <h4>Wallet</h4>
-//                 <p>Available balance: ₹300</p>
-//             </div>
-            
-//             <div>
-//                 <h4>MaestroKard</h4>
-//             </div>
-
-//             <div>
-//                 <h4>Paypal</h4>
-//             </div>
-
-//             <div>
-//                 <h4>Stripe</h4>
-//             </div>
-
-//             <div className={styles.addDebitCard}>
-//                 <h4>Add Debit Card</h4>
-//             </div>
-//           </div>
-//           <div>
-//             <p>Amount to be payed<span>₹240</span></p>
-//           </div>
-//           <button>Proceed Payment</button>
-//           </div>
-//         </h2>
-//       </div>
-//     </div>
-//   )
-// }
-
-// export default Payment
-
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { FaArrowLeft } from 'react-icons/fa';
-import styles from './pageModule/Checkout.module.css';
+import styles from './pageModule/Payment.module.css';
 import Header from '../components/Header';
-import SimilarRestaurants from '../components/SimilarRestaurents';
-import { toast } from 'react-toastify';
+import Footer from '../components/Footer';
+import { FaWallet } from "react-icons/fa";
+import { MdKeyboardArrowRight } from "react-icons/md";
+import { MdOutlineCircle } from "react-icons/md";
+import { RiAddFill } from "react-icons/ri";
+import MobileNav from '../components/MobileNav';
 
 function Payment() {
-    const userName = localStorage.getItem("userName");
+  const userName = localStorage.getItem("userName");
   const navigate = useNavigate();
   const location = useLocation();
   const { state } = location;
   const { cartItems } = state || { cartItems: [] };
+  const { subtotal } = state || {};
 
   const handleProceedPayment = () => {
 
@@ -72,19 +28,76 @@ function Payment() {
   };
 
   return (
+  <div className={styles.mainDiv}>
+    <MobileNav />
+    <div id={styles.header}>
+    <Header userName={userName}/>
+    </div>
     <div>
-      <Header userName={userName}/>
-      <div>
-        <div onClick={handleGoBack}><h2><FaArrowLeft /> Your Order Details</h2></div>
-        <div className={styles.paymentDetails}>
-          <h2>Choose Payment Method</h2>
-          <button onClick={handleProceedPayment}>Proceed Payment</button>
+      <div id={styles.goBack} onClick={handleGoBack}><h2><FaArrowLeft /> Choose and Pay</h2>
+      </div>
+      <div className={styles.paymentMethodsNPay}>
+        <div className={styles.paymentMethods}>
+          <div id={styles.wallet} className={styles.paymentMethodsDiv}>
+            <span><FaWallet /></span>
+            <div className={styles.flexdRow}>
+            <div>
+              <h4>Wallet</h4>
+              <p>Available balance: ₹300</p>
+            </div>
+            <div id={styles.arrow}><MdKeyboardArrowRight /></div>
+            </div>
+          </div>
+          
+          <div className={`${styles.card} ${styles.paymentMethodsDiv}`}>
+            <h3>M</h3>
+            <div className={styles.flexdRowCard}>
+            <p>MaestroKard</p>
+            <span><MdOutlineCircle id={styles.circle}/></span>
+            </div>
+          </div>
+
+          <div className={`${styles.card} ${styles.paymentMethodsDiv}`}>
+            <h3>P</h3>
+            <div className={styles.flexdRowCard}> 
+            <p>Paypal</p>
+            <span><MdOutlineCircle id={styles.circle}/></span>
+            </div>
+          </div>
+
+          <div className={`${styles.card} ${styles.paymentMethodsDiv}`}>
+            <h3>S</h3>
+            <div className={styles.flexdRowCard}>
+            <p>Stripe</p>
+            <span><MdOutlineCircle id={styles.circle}/></span>
+            </div>
+          </div>
+
+          <div id={styles.addCard} className={styles.paymentMethodsDiv}>
+            <div><RiAddFill id={styles.plus}/></div>
+            <p>Add Debit Card</p>
+          </div>
+        </div>
+
+        <div>
+          <div className={styles.paymentDetails}>
+            <div className={styles.totalPayedAmount}>
+            <p>Amount to be payed</p>
+            <h3>₹{subtotal}</h3>
+            </div>
+            <button onClick={handleProceedPayment}>Proceed Payment</button>
+          </div>
         </div>
       </div>
-      <SimilarRestaurants />
     </div>
+    <div id={styles.footer}>
+    <Footer />
+    </div>
+  </div>
   );
 }
 
 export default Payment;
 
+// #FFE8CE
+//#2D3748

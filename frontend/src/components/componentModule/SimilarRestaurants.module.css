@@ -31,3 +31,28 @@
     padding-left: 15px;
     color: #ffffff;
 }
+
+@media (max-width: 600px) {
+    .restaurants {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 90vw;
+        gap: 30px;
+        margin-bottom: 60px;
+    }
+
+    .restaurants img {
+        height: 146px;
+        width: 154px;
+    }
+
+    
+.cardCategory {
+    border: 1px solid #0000001A;
+    border-radius: 10px;
+    height: 215px;
+    width: 155px;
+    background-color: #FC8A06;
+}
+}

@@ -1,18 +1,246 @@
-/* .orderDetailsNAddressDiv {
+.mainDiv {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 5vw;
+}
 
-} */
+.orderDetailsNAddressDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
 
 .itemCard {
+  display: flex;
+  padding: 10px 0px;
+  border-top: 1px solid #000000;
+  align-items: center;
+}
+  
+.itemImage {
+  width: 80px;
+  height: 80px;
+  margin-right: 1rem;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.orderDetails {
+width: 50vw;
+max-height: fit-content;
+border-left: 1px solid #000000;
+border-right: 1px solid #000000;
+border-bottom: 1px solid #000000;
+border-radius: 10px;
+padding: 0px 10px 10px 10px;
+}
+
+.nameNPrice {
+  width: 40vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.notes p{
+  color: #646363;
+}
+
+.notes div {
+  width: calc(50vw-20px);
+  height: 50px;
+  border: 1px solid #000000;
+  border-radius: 30px;
+  padding: 0px 20px;
+  line-height: 50px;
+  color: #646363;
+}
+
+.goBack {
+  width: 350px;
+  margin-bottom: 40px;
+}
+
+#goBack {
+  padding-right: 10px;
+  width: 35px;
+  height: 25px;
+}
+
+.addressNlogo {
+  width: 36vw;
+  height: 70px;
+  border-radius: 50px;
+  border: 1px solid #000000;
+  padding: 0px 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.addressNlogo span {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+  border-radius: 50%;
+  border: 1px solid #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#locationLogo {
+  width: 25px;
+  height: 25px;
+  color: #FC8A06;
+}
+
+.defaultAddress {
+  display: flex;
+  flex-direction: row;
+  color: #646363;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+}
+
+.taxablebill {
+  width: 36vw;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  justify-content: center;
+  margin: 20px 0px;
+  padding: 20px 0px;
+  gap: 10px;
+  color: #646363;
+}
+
+.taxablebill p {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.subtotal p{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #646363;
+  margin-bottom: 20px;
+}
+
+.submitButton {
+  width: 36vw;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 30px;
+  border: none;
+  background-color: #FC8A06;
+  color: #ffffff;
+  font-size: 15px;
+}
+
+#footer {
+  margin-left: -5vw;
+}
+
+@media (max-width: 600px) {
+
+  .mainDiv {
     display: flex;
+    flex-direction: column;
+    padding: 0px 5vw;
+  }
+
+  .orderDetailsNAddressDiv {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 1rem;
+    gap: 50px;
   }
-  
-  .itemImage {
-    width: 80px;
-    height: 80px;
-    margin-right: 1rem;
-    object-fit: cover;
-    border-radius: 8px;
+
+  #header {
+    display: none;
   }
-  
+
+  .goBack {
+    margin-top: 40px;
+  }
+
+  .orderDetails {
+    width: 90vw;
+    max-height: fit-content;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    border-radius: 10px;
+    padding: 0px 10px 10px 10px;
+    }
+
+    .AddressNSubtotalDiv {
+      width: 90vw;
+    }
+
+    .taxablebill {
+      width: 90vw;
+      display: flex;
+      flex-direction: column;
+      border-top: 1px solid #000000;
+      border-bottom: 1px solid #000000;
+      justify-content: center;
+      margin: 20px 0px;
+      padding: 20px 0px;
+      gap: 10px;
+      color: #646363;
+    }
+
+    .AddressDiv {
+      width: 80vw;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .addressNlogo {
+      width: 90vw;
+      height: 70px;
+      border-radius: 50px;
+      border: 1px solid #000000;
+      padding: 0px 10px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .submitButton {
+      width: 90vw;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      border-radius: 30px;
+      border: none;
+      background-color: #FC8A06;
+      color: #ffffff;
+      font-size: 15px;
+      margin-bottom: 50px;
+      margin-top: 10px;
+    }
+
+    #similarRestaurants {
+      display: none;
+    }
+
+
+
+    #footer {
+      display: none;
+    }
+
+
+
+}

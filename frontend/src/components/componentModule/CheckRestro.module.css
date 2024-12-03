@@ -1,0 +1,57 @@
+#checkRestro {
+    display: none;
+}
+
+
+@media (max-width: 600px) {
+    #checkRestro {
+        width: 92vw;
+        max-height: fit-content;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff;
+        background-color: #03081F;
+        margin: 4vw;
+        border-radius: 10px;
+    }
+
+    #checkRestro span {
+        color: #FC8A06;
+        display: flex;
+        justify-content: center;
+    }
+
+    #checkRestro h1 {
+        margin: 25px 0px;
+    }
+
+    #checkRestro div {
+        height: 70px;
+        border-radius: 30px;
+        background-color: #ffffff;
+        width: 60vw;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        color: #4c4c4c;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    #checkRestro button {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background-color: #FC8A06;
+        border: none;
+        
+    }
+
+    #rightArrrow {
+        height: 30px;
+        width: 30px;
+    }
+}
