@@ -108,7 +108,7 @@ const Login = () => {
         >
           <Form className={styles.signUpForm}>
           <div className={styles.logo}>
-                <img src="./assets/logo.png" alt="logo" />
+                <img src="logo.png" alt="logo" />
             </div>
             <div>
                 <h1>Welcome 👋</h1>
@@ -164,7 +164,7 @@ const Login = () => {
         >
           <Form className={styles.signInForm}>
             <div className={styles.logo}>
-                <img src="./assets/logo.png" alt="logo" />
+                <img src="logo.png" alt="logo" />
             </div>
             <div>
                 <h1>Welcome Back 👋</h1>

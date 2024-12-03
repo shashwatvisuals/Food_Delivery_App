@@ -173,7 +173,7 @@ function Product() {
 
             <div className={styles.myBasket}>
               <div>
-                <h2><img src="../assets/Basket.png" alt="Image" />My Basket</h2>
+                <h2><img src="Basket.png" alt="Image" />My Basket</h2>
               </div>
               <div className={styles.addedItems}>
                 {cart.length === 0 ? (
