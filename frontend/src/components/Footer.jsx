@@ -13,7 +13,7 @@ function Footer() {
     <div className={styles.mainContainer}>
         <div className={styles.upperContainer}>
             <div className={styles.upperContainerChild}>
-                <div>
+                <div id={styles.appLogoDiv}>
                     <img id={styles.appLogo} src={logo} alt="logo" />
                 </div>
                 <div className={styles.bothButton}>
@@ -33,7 +33,7 @@ function Footer() {
                     </button>
                 </div>
                 <p>Company # 490039-445, Registered with <br />House of companies.</p>
-            </div>
+                </div>
 
             <div className={styles.upperContainerChild}>
                 <h4>Get Exclusive Deals in your Inbox</h4>
@@ -50,7 +50,7 @@ function Footer() {
                 </div>
             </div>
 
-            <div className={`${styles.upperContainerChild} ${styles.upperHalfRight}`}>
+            <div id={styles.flexStart} className={`${styles.upperContainerChild} ${styles.upperHalfRight}`}>
                 <h4>Legal Pages</h4>
                 <p>Terms and conditions</p>
                 <p>Privacy</p>
@@ -58,7 +58,7 @@ function Footer() {
                 <p>Modern Slavery Statement</p>
             </div>
 
-            <div className={`${styles.upperContainerChild} ${styles.upperHalfRight}`}>
+            <div id={styles.flexStart} className={`${styles.upperContainerChild} ${styles.upperHalfRight}`}>
                 <h4>Important Links</h4>
                 <p>Get help</p>
                 <p>Add your restaurant</p>

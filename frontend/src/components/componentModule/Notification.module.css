@@ -165,3 +165,10 @@
 .notiLogodiv p {
     color:#00000066;
 }
+
+@media (max-width:600px) {
+    .introContainer {
+        display: none;
+    }
+
+}

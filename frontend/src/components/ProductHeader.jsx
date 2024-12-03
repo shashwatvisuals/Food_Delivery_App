@@ -4,19 +4,6 @@ import { BsFillPlusCircleFill } from "react-icons/bs";
 function ProductHeader() {
   return (
 <div className={styles.mainDiv}>
-    {/* <div className={styles.header}>
-        <h4 id={styles.selectedlink}>Offers </h4>
-        <h4>Burgers</h4>
-        <h4>Fries</h4>
-        <h4>Snacks</h4>
-        <h4>Salads</h4>
-        <h4>Cold drinks </h4>
-        <h4> Happy Meal®</h4>
-        <h4>Desserts</h4>
-        <h4>Hot drinks</h4>
-        <h4>Sauces</h4>
-        <h4>Orbit®</h4>
-    </div> */}
     <div className={styles.card}>
         <div>
             <img src="https://images.pexels.com/photos/6593913/pexels-photo-6593913.jpeg?auto=compress&cs=tinysrgb&w=600" alt="image" />

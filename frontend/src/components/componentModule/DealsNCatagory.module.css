@@ -106,3 +106,83 @@
     padding-left: 15px;
 }
 
+@media (max-width: 600px) {
+    .dishes {
+        display: none;
+    }
+
+    .dealsContainer {
+        display: flex;
+        justify-content: space-between;
+        width: 100vw;
+        /* height: 140px; */
+        align-items: center;
+        padding: 0px 25px;
+    }
+
+    .dealsContainer h2 {
+        width: 100vw;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .MainContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: fit-content;
+    }
+
+    .categories {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100vw;
+        margin-bottom: 30px;
+        padding: 0px 10px;
+    }
+
+    .cardCategory {
+        border: 1px solid #0000001A;
+        border-radius: 10px;
+        height: 225px;
+        width: 160px;
+        background-color: #03081F;
+        border: none;
+        margin-bottom: 30px;
+    }
+
+    .categories img {
+        height: 145px;
+        width: 160px;
+    }
+
+    .cardCategory div {
+        background-color: #03081F;
+        padding-left: 15px;
+        border-radius: 10px;
+        border: 1px solid #0000001A;
+        color: #ffffff;
+    }
+
+    .cardCategory h3{
+        color: #FC8A06;
+        font-size: 1em;
+    }
+
+    .card {
+        display: flex;
+        width: 100vw;
+        flex-direction: row;
+        align-items: center;
+        overflow: auto;
+        white-space: nowrap;
+        gap: 30px;
+        padding: 20px;
+    }
+}

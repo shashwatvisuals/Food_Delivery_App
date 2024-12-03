@@ -7,7 +7,10 @@ import foodRouter from "./routes/foodRoute.js"
 import orderRouter from "./routes/orderRoute.js"
 
 const allowedOrigins = ['https://food-delivery-frontend-b7q4.onrender.com'];
-//app config
+
+// const allowedOrigins = ['http://localhost:5173'];
+
+// //app config
 const app = express()
 const port = process.env.PORT || 4000;
 
@@ -22,7 +25,7 @@ app.use(cors({
       }
     },
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    credentials: true, // If you need to send cookies or auth headers
+    credentials: true,
   }));
 
 
@@ -41,5 +44,5 @@ app.get("/", (req,res) => {
 })
 
 app.listen(port,() => {
-    console.log(`server started on http://localhost:${port}`)
+    // console.log(`server started on http://localhost:${port}`)
 })

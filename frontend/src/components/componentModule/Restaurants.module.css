@@ -32,3 +32,22 @@
     padding-left: 15px;
     color: #ffffff;
 }
+
+@media (max-width: 600px) {
+    .restaurants {
+        width: 100vw; 
+        padding-left: 10px; 
+        padding-right: 10px; 
+        overflow: auto;
+        white-space: nowrap;
+        gap: 20px;
+    }
+
+    .cardCategory {
+        border: 1px solid #0000001A;
+        border-radius: 10px;
+        height: 225px;
+        width: 200px;
+        background-color: #FC8A06;
+    }
+}
