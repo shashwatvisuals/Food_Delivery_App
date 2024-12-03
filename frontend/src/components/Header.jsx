@@ -53,7 +53,7 @@ import { IoArrowDownCircle } from 'react-icons/io5';
 import { FaCircleUser } from 'react-icons/fa6';
 import styles from './componentModule/Header.module.css';
 
-function Header({ onCartClick }) {
+function Header({ onCartClick, userName}) {
   return (
     <div className={styles.mainContainer}>
       <div className={styles.topMostDiv}>
@@ -94,7 +94,7 @@ function Header({ onCartClick }) {
           <h5>Track Order</h5>
           <div id={styles.user}>
             <FaCircleUser id={styles.userLogo} />
-            <h4>Login/Signup</h4>
+            <h4>{userName ? `hey, ${userName.charAt(0).toUpperCase() + userName.slice(1)}` : 'Login/Signup'}</h4>
           </div>
         </div>
       </div>

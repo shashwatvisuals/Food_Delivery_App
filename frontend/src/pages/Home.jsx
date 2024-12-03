@@ -8,9 +8,10 @@ import JoinUs from '../components/JoinUs'
 import styles from './pageModule/Home.module.css'
 
 function Home() {
+  const userName = localStorage.getItem("userName");
   return (
     <div className={styles.mainContainer}>
-      <Header />
+      <Header userName={userName}/>
       <Notification />
       <DealsNCatagory />
       <Restaurants />

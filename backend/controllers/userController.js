@@ -5,33 +5,86 @@ import validator from "validator"
 import { response } from "express";
 
 //login user
-const loginUser = async (req, res) => {
-    const {email, password} = req.body;
-    try {
-        const user = await userModel.findOne({email})
+// const loginUser = async (req, res) => {
+//     const {email, password} = req.body;
+//     try {
+//         const user = await userModel.findOne({email})
 
-        if (!user) {
-           return res.json({success:false,message:"User does not exist"})
-        }
+//         if (!user) {
+//            return res.json({success:false,message:"User does not exist"})
+//         }
 
-        const isMatch = await bcrypt.compare(password,user.password);
-        if (!isMatch) {
-            return res.json({success:false, message:"Invalid Credentials"})
-        }
+//         const isMatch = await bcrypt.compare(password,user.password);
+//         if (!isMatch) {
+//             return res.json({success:false, message:"Invalid Credentials"})
+//         }
 
-        const token = createToken(user._id);
-        res.json({success:true, token})
+//         const token = createToken(user._id);
+//         res.json({success:true, token})
 
-    } catch (error) {
-        console.log(error)
-        res.json({success:false, message:"Error"})
-    }
+//     } catch (error) {
+//         console.log(error)
+//         res.json({success:false, message:"Error"})
+//     }
 
-}
+// }
 
+// const createToken = (id) => {
+//     return jwt.sign({id}, process.env.JWT_SECRET)
+// }
+
+// Function to create a JWT token
 const createToken = (id) => {
-    return jwt.sign({id}, process.env.JWT_SECRET)
-}
+    return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: "1h" });
+  };
+
+
+const loginUser = async (req, res) => {
+    const { email, password } = req.body;
+    try {
+      const user = await userModel.findOne({ email });
+  
+      if (!user) {
+        return res.json({ success: false, message: "User does not exist" });
+      }
+  
+      const isMatch = await bcrypt.compare(password, user.password);
+      if (!isMatch) {
+        return res.json({ success: false, message: "Invalid Credentials" });
+      }
+  
+      // Create the token
+      const token = createToken(user._id);
+  
+      // Return the token and user name
+      res.json({
+        success: true,
+        token,
+        user: {
+          name: user.name, // Add user name to the response
+          email: user.email,
+        },
+      });
+    } catch (error) {
+      console.log(error);
+      res.json({ success: false, message: "Error" });
+    }
+  };
+  
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
 
 //register user
 const registerUser = async (req, res) => {

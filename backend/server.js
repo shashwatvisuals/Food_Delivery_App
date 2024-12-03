@@ -4,6 +4,7 @@ import {connectDB} from "./config/db.js"
 import userRouter from "./routes/userRoute.js"
 import 'dotenv/config'
 import foodRouter from "./routes/foodRoute.js"
+import orderRouter from "./routes/orderRoute.js"
 
 
 //app config
@@ -22,6 +23,7 @@ connectDB();
 //api endpoints
 app.use("/api/food",foodRouter)
 app.use("/api/user", userRouter)
+app.use("/api/order", orderRouter)
 
 
 app.get("/", (req,res) => {

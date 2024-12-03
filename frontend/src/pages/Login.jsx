@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
@@ -11,6 +11,10 @@ import styles from "./pageModule/Login.module.css"
 const Login = () => {
   const [isSignUp, setIsSignUp] = useState(false);
   const navigate = useNavigate();
+  useEffect(() => {
+    localStorage.removeItem("authToken");
+    localStorage.removeItem("userName");
+  }, []);
 
   // Form validation schemas
   const signUpSchema = Yup.object({
@@ -46,7 +50,43 @@ const Login = () => {
       .then((response) => {
         if (response.data.success) {
           toast.success("Sign in successful!");
-          // navigate("/home"); // Redirect to home page
+          
+          localStorage.setItem("authToken", response.data.token);
+          localStorage.setItem("userName", response.data.user.name);
+
+
+
+
+
+
+        // Fetch protected data using the token
+        const token = localStorage.getItem("authToken");
+        
+        // Example of fetching a protected route after successful login
+        axios
+          .get("http://localhost:4000/protected-route", {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          })
+          .then((protectedResponse) => {
+            console.log("Protected Data:", protectedResponse.data);
+            // Handle the protected data here
+          })
+          .catch((error) => {
+            toast.error("Failed to fetch protected data: " + error.message);
+          });
+
+        // Optionally, navigate to another page
+        navigate("/home");
+
+
+
+
+
+
+
+
         } else {
           toast.error("User not found!");
         }
